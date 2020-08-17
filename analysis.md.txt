@@ -1,0 +1,47 @@
+						OPERATING SYSTEMS PROGRAMMING ASSIGNMENT REPORT
+
+								PREPARED BY:
+
+							- CISSE MAMADOU THIANA 1731425
+							- LIU YUFEI 1722279
+							- YANG HAO 1414791
+
+
+		INTRODUCTION
+	
+	Class scheduling is nearly similar to CPU scheduling, the only difference is that class scheduling cannot be pre-emptive for the only reason that 
+once a class has started, it connot be stopped until it gets over. In that optic, non pre-emptive algorithms such as first come first serve (FCFS), 
+shortest job first (SJF), priority scheduling are quite suitable to accomplish this task. This report elaborates on the implementation of the 
+above mentionned algorithms and their analysis. Note the a class has the following attributes: course code, duartion, priority and arrival time.
+
+		1- First Come First Serve (FCFS):
+As a class has an arrival time, it makes possible to be implemented with first come first serve algorithms. Also known as FIFO (first in first out), it 
+executes the processes according to their arrival time. This scheduling algorithm may have some disadvantages if short processes come in late. That means
+they will have to wait for long processes that came in early to finish first and that result in lower CPU and device utilization. Let's not forget that the 
+problem of salvation may as well occur. FCFS is poor in performance since the average waiting time is higher as compare to other scheduling algorithms. 
+
+		2- Shortest Job First (SJF):
+Overall, Shortest-Job-First (SJF) Scheduling has the least average waiting time with 3.4 hours compared with First-come, First-serve (FCFS) Scheduling with
+4 hours and Priority Scheduling with 4.2 hours respectively. Therefore, SJF has the best results for us to schedule the class time.
+The logic of SJF is that make sure the subjects which have the least class duration can be scheduled to hold so that there will be less waiting time for 
+other subjects. In fact, it makes sense and it gives the minimum average waiting time. Otherwise, in CPU Scheduling, it difficult to know the length of the
+next request. However, it is not the same case in class scheduling. Since it is non-preemptive, the classes are handled easily. 
+On the other hand, SJF does not have the least turnaround time, it is a little longer than FCFS. FCFS is more straightforward. The reason is that for FCFS,
+it has arrival time instead of all subjects are being executed at the same time. Due to this, it may have less time on turnaround time than SJF.
+For Priority Scheduling, it depends on its priority level but not time. Therefore, it may have longer average waiting time and average turnaround time 
+than other algorithms.
+ 
+		3- Priority Scheduling:
+Priority refers to the priority level assigned to the task by the computer operating system. It determines the priority of tasks when using resources.
+The priority level is assigned to the device. It determines the order in which the device receives the response from the processor when it makes an 
+interrupt request. Task scheduling priority mainly refers to the priority of the task when it is scheduled to run, mainly related to the priority of the
+task itself and the scheduling algorithm. Especially in real-time systems, task scheduling priority reflects the importance and urgency of a task.
+Each process has a corresponding priority, and the priority determines when it runs and how much CPU time it receives. There are 32 priority levels in
+Windows, from 0 to 31, called the basic priority level. The priority of the Linux system ranges from 0-140, 0-99 for real-time processes, and 100-140 for
+non-real-time processes. Contrary to Windows, the smaller the Linux priority value, the higher the level, and the priority of tasks scheduled by the kernel.
+The definition of priority can be divided into internal or external:
+-The internally defined priority uses some measurement data to calculate the process priority. For example, time limits, memory requirements, the number of
+open files, and the ratio of average I/O execution time to average CPU execution can all be used to calculate the priority.
+-The externally defined priority adopts criteria outside the operating system, such as the importance of the process, the type and amount of fees used to 
+pay for the use of the computer, the sponsoring department, and other factors.
+ 
